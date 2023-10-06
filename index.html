@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<div class="Maincontent">
+    <div class="Header">
+        <div class="nav-heads">
+            <div class="logo">
+                <img class="metablog" src="Logo.png" alt="">
+            </div>
+            <div class="nav-links" id="mynav">
+                <div class="links">Home</div>
+                <div class="links">Blog</div>
+                <div class="links">Single Post</div>
+                <div class="links">Pages</div>
+                <div class="links">Contact</div>
+            </div>
+            <div class="switch">
+                <div class="inputcontainers">
+                    <input type="text" id="search" placeholder="Search">
+                    <ion-icon name="search-outline"></ion-icon>
+                </div>
+               
+            </div>
+            <div class="toggle" id="navbutton" onclick="nav()"><img class="Switch" src="Swich.png" alt=""> </div>
+        </div>
+    </div>
+    
+    <div class="Content">
+        
+        <div class="nav-content">
+            <div class="nav-con1">Technology</div>
+            <div class="nav-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+            <div class="nav-con3">
+                <div class="nav-10">
+                    <div class="nav-img"><img class="vector" src="Image (1).png" alt=""></div>
+                    <div class="nav-wrd"><strong>Jason Fransico</strong></div>
+                </div>
+                <div class="nav-20">August 20, 2022</div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+<div class="Form">
+    <div class="form">
+        <div class="Login-page01"> 
+            <p><strong>TITLE</strong></p>
+            <input type="text" class="Title" placeholder="surname first" id="title">
+            <p><strong>DESCRIPTION</strong></p>
+            <input type="text" class="Title" placeholder="post" id="body">
+            <p><strong>AUTHOR</strong></p>
+            <input type="text" class="Title" id="author">
+            <p><strong>IMAGE</strong></p>
+            <input type="file" class="Title" id="image">
+        </div>
+        <div class="Login-page02">
+            <button class="submit" onclick="issl()" >SUBMIT</button>
+        </div>
+    </div>
+   
+</div>
+
+
+<script>
+
+    function issl() {
+        const category = document.getElementById('title').value
+        const title = document.getElementById('body').value
+        const author = document.getElementById('author').value
+        const image = document.getElementById('image')
+
+
+        
+        const blogcontainer = document.getElementById('blogcontainer')
+
+        const box = document.createElement('div');
+        box.classList.add('Row1')
+
+        const imagebox = document.createElement('div');
+        imagebox.classList.add('row-con2')
+        imagebox.textContent = category
+
+
+
+        const imagebox2 = document.createElement('div');
+        imagebox2.classList.add('row-20')
+        imagebox2.textContent = title
+
+        box.appendChild(imagebox)
+        box.appendChild(imagebox2)
+
+        blogcontainer.appendChild(box)
+
+
+
+        const rowwrd = document.createElement('div');
+        rowwrd.classList.add('row-wrd')
+        rowwrd.textContent = author
+
+   
+        const img = document.createElement('img');
+            img.src = image
+            box.appendChild(img)
+
+
+        box.appendChild(imagebox)
+        box.appendChild(imagebox2)
+        box.appendChild(rowwrd)
+
+
+
+
+        blogcontainer.appendChild(box)
+
+    
+        
+    }
+
+
+</script>
+
+    <div class="Hero">
+        <div class="hero-text"><strong>Latest Post</strong></div>
+    </div>
+   
+
+
+    <div class="Rows">
+        <div class="Row-wrap">
+            <div class="Three-Rows" id="blogcontainer">
+             
+                <div class="Row1">
+                    <div class="row-con2">TITLE</div>
+                    <H2 class="row-20">BODY</H2>
+                </div>
+            
+    
+                </div>
+              
+                <!-- <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 38.png" alt="">
+                    </div>
+                    <div class="row-content">
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="image20.png" alt=""></div>
+                                <div class="row-wrd"><strong>Tracey Wilson</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+    
+                </div>
+
+
+                <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 38 (1).png" alt="">
+                    </div>
+                    <div class="row-content">
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="Image (1).png" alt=""></div>
+                                <div class="row-wrd"><strong>Jason Fransico</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 38 (2).png" alt="">
+                    </div>
+                    <div class="row-content">
+      
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="image22.png" alt=""></div>
+                                <div class="row-wrd"><strong>Elizabeth Slavin</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 381.png" alt="">
+                    </div>
+                    <div class="row-content">
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="image23.png" alt=""></div>
+                                <div class="row-wrd"><strong>Ernie Smith</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 38 (1)2.png" alt="">
+                    </div>
+                    <div class="row-content">
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="Image (1)22.png" alt=""></div>
+                                <div class="row-wrd"><strong>Eric Smith</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 38 (2)3.png" alt="">
+                    </div>
+                    <div class="row-content">
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="image22.png" alt=""></div>
+                                <div class="row-wrd"><strong>Tracey Wilson</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 38 (3).png" alt="">
+                    </div>
+                    <div class="row-content">
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="Image (1).png" alt=""></div>
+                                <div class="row-wrd"><strong>Jason Francisco</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 38 (4).png" alt="">
+                    </div>
+                    <div class="row-content">
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="image20.png" alt=""></div>
+                                <div class="row-wrd"><strong>Elizabeth Slavin</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Row1">
+                    <div class="row-img">
+                        <img class="recs" src="Rectangle 38 (5).png" alt="">
+                    </div>
+                    <div class="row-content">
+                        <div class="row-con1"><strong>Technology</strong></div>
+                        <div class="row-con2">The Impact of Technology on the Workplace: How Technology is Changing</div>
+                        <div class="row-con3">
+                            <div class="row-10">
+                                <div class="Row-img"><img class="image" src="image23.png" alt=""></div>
+                                <div class="row-wrd"><strong>Ernie Smith</strong></div>
+                            </div>
+                            <div class="row-20">August 20, 2022</div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+   
+    <div class="Footer">
+        <div class="foot">
+            <div class="nav-foot1">
+                <div class="foot-txt"><strong>About</strong></div>
+                <br>
+                <div class="foot-txt1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+                <div class="foot-txt2"><strong style="color: #FFF;">Email</strong> :info@jstemplate.net</div>
+                <div class="foot-txt2"><strong style="color: #FFF;">Phone</strong> : 880 123 456 789</div>
+            </div>
+            <div class="nav-foot2">
+                <div class="foot-txt"><strong>Quick Link</strong></div>
+                <br>
+                <div class="foot-links">
+                    <div class="fts">Home</div>
+                    <div class="fts">About</div>
+                    <div class="fts">Blog</div>
+                    <div class="fts">Archived</div>
+                    <div class="fts">Author</div>
+                    <div class="fts">Connect</div>
+                </div>
+            </div>
+            <div class="nav-foot2">
+                <div class="foot-txt"><strong>Category</strong></div>
+                <br>
+                <div class="foot-links">
+                    <div class="fts">Lifestyle</div>
+                    <div class="fts">Technology</div>
+                    <div class="fts">Travel</div>
+                    <div class="fts">Business</div>
+                    <div class="fts">Economy</div>
+                    <div class="fts">Sport</div>
+                </div>
+            </div>
+            <div class="nav-foot3">
+                <div class="foot-txt"><strong>Weekly Newsletter</strong></div>
+                <div class="foot-txt1">Get blog articles and offers via email</div>
+                <div class="inputcontainers">
+                    <input type="text" id="search" placeholder="Your Email">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </div>
+                <button class="sub">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    function nav() {
+        const navtoggler = document.getElementById('mynav')
+
+        navtoggler.classList.toggle('navactive')
+    }
+</script>
+
+<body>
+    
+</body>
+</html>
